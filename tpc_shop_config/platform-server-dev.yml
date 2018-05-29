@@ -1,0 +1,16 @@
+profile: dev
+hystrix:   
+  threadpool:   
+    default:   
+      coreSize: 500  #执行最大的线程数默认为10  
+  command:   
+    paas-file:   
+      execution:   
+        isolation:   
+          thread:   
+            timeoutInMilliseconds: 3600000   
+    default:   
+      execution:   
+        isolation:   
+          thread:   
+            timeoutInMilliseconds: 8000  #响应时间默认为1000ms
